@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exercise.css">
+    <title>Body Part Workouts Carousel</title>
+</head>
+<body>
+    <div class="carousel-container">
+        <h2>Body Part Workouts Carousel</h2>
+        <div class="carousel" id="workout-carousel">
+            <div class="carousel-item">
+                <h3>Bicep Workouts</h3>
+                <ul>
+                    <li>1 Bicep Curls</li>
+                    <li>2 Hammer Curls</li>
+                    <li>3 Barbell Curls</li>
+                </ul>
+            </div>
+            <div class="carousel-item">
+                <h3>Chest Workouts</h3>
+                <ul>
+                    <li>1 Bench Press</li>
+                    <li>2 Push-Ups</li>
+                    <li>3 Dumbbell Fly</li>
+                </ul>
+            </div>
+            <!-- Add other workouts here -->
+        </div>
+    </div>
+
+    <!-- Java -->
+    <script>
+        const carouselItems = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        function showItem(index) {
+            carouselItems.forEach((item, i) => {
+                if (i === index) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function nextItem() {
+            currentIndex = (currentIndex + 1) % carouselItems.length;
+            showItem(currentIndex);
+        }
+
+        function previousItem() {
+            currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
+            showItem(currentIndex);
+        }
+
+        // Automatic rotation (change slide every 5 seconds)
+        setInterval(nextItem, 5000);
+
+        // Initial call to start the carousel rotation immediately
+        showItem(currentIndex);
+    </script>
+</body>
+</html>
+temporary 
