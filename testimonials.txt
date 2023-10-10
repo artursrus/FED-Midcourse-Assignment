@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nintendo Switch Testimonials</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .testimonial-box {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .testimonial-text {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-author {
+            font-style: italic;
+        }
+
+        /* Media Query for mobile devices */
+        @media (max-width: 767px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Nintendo Switch Testimonials</h1>
+    <div class="grid">
+        <div class="testimonial-box">
+            <p class="testimonial-text">I love my Nintendo Switch! It's so versatile and fun to play with friends and family.</p>
+            <p class="testimonial-author">- Sarah</p>
+        </div>
+        <!-- Add more testimonial boxes as needed -->
+    </div>
+</body>
+</html>
