@@ -1,7 +1,13 @@
 // Api KEY = 0hmDrXG1OUselhJqNDT5Jg==31C3PNP5j2D66iM2
 const displayExercises = document.querySelector('#displayExercises')
+
+let capitalizeLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+
 const getExercises = async (back) => {
-    const urlAPI = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/back?limit=10`;
+    const urlAPI = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/chest?limit=5`;
     const keyAPI = {
 	    method: 'GET',
 	    headers: {
@@ -18,30 +24,50 @@ const getExercises = async (back) => {
         
         //For each object displays name in the html
         result.forEach((exercise, index ) => {
+
+            const exerciseDescription = () => {
             console.log(exercise.name);
+            console.log(exercise.equipment);
+            console.log(exercise.instructions);
+            console.log(exercise.bodyPart);
+        }
+
             //Creating html elements 
             const exerciseDiv = document.createElement('div')
             const exerciseGif = document.createElement('img')
+            const exerciseP = document.createElement('p')
+
+            const capitalizedExercise = capitalizeLetter(exercise.name)
 
             //Putting API information into html elements
-            exerciseDiv.innerHTML += exercise.name;
+            exerciseP.textContent = capitalizedExercise;
             exerciseGif.src = exercise.gifUrl;
+
+            exerciseP.setAttribute('id', index)
 
             //Appending so that image is in the div container
             displayExercises.appendChild(exerciseDiv)
             displayExercises.appendChild(exerciseGif)
+            displayExercises.appendChild(exerciseP)
+
+            exerciseDiv.appendChild(exerciseP)
             exerciseDiv.appendChild(exerciseGif)
+
+
 
             exerciseDiv.classList.add('exercises')
             exerciseDiv.setAttribute('id', index)
             console.log(index)
+            
         });
 
         console.log(result)
-
+        
     }
 
     
 }
+
+
 
 getExercises();
