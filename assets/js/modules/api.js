@@ -9,7 +9,6 @@ let capitalizeLetter = (string) => {
 
 const collectingInput = () => {
     console.log(collectedExercise)
-    export { collectedExercise };
 }
 
 
