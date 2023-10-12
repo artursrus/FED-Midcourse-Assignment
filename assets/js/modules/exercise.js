@@ -7,7 +7,7 @@ let capitalizeLetter = (string) => {
 }
     
 const exerciseDescription = async () => {
-    
+    //Replaces spaces with characters for API exercise call
     const replacedSpaces = collectedExercise.replace(/\s+/g,"%20");
     console.log(replacedSpaces)
 
@@ -34,19 +34,19 @@ const exerciseDescription = async () => {
         const capitalizedTarget = capitalizeLetter(exerciseObject.target)
             
         const exerciseDescriptiondDiv = document.createElement('div')
-        const exerciseDescriptionP = document.createElement('p')
+        const exerciseDescriptionh2 = document.createElement('h2')
         const exerciseDescriptionGif = document.createElement('img')
 
-        exerciseDescriptionP.textContent = capitalizedExercise;
+        exerciseDescriptionh2.textContent = capitalizedExercise;
         exerciseDescriptionGif.src = exerciseObject.gifUrl
         
 
         exerciseCard.appendChild(exerciseDescriptiondDiv)
-        exerciseCard.appendChild(exerciseDescriptionP)
+        exerciseCard.appendChild(exerciseDescriptionh2)
         exerciseCard.appendChild(exerciseDescriptionGif)
         
         exerciseDescriptiondDiv.appendChild(exerciseDescriptionGif)
-        exerciseDescriptiondDiv.appendChild(exerciseDescriptionP)
+        exerciseDescriptiondDiv.appendChild(exerciseDescriptionh2)
         
         //Gets instructions from the array
         if (Array.isArray(exerciseObject.instructions)) {
@@ -56,7 +56,7 @@ const exerciseDescription = async () => {
             exerciseInstructions.textContent = instructions; 
             exerciseCard.appendChild(exerciseInstructions);
             exerciseDescriptiondDiv.appendChild(exerciseInstructions)
-             });
+            });
         }
 
         
@@ -65,9 +65,9 @@ const exerciseDescription = async () => {
         const exerciseEquipment = document.createElement('p')
         const exerciseTarget = document.createElement('p')
 
-        exerciseMuscle.textContent = capitalizedMuscle
-        exerciseTarget.textContent = capitalizedTarget
-        exerciseEquipment.textContent = capitalizedEquipment
+        exerciseMuscle.textContent = `Muscle: ${capitalizedMuscle}`
+        exerciseTarget.textContent = `Target: ${capitalizedTarget}`
+        exerciseEquipment.textContent =`Equipment: ${capitalizedEquipment}`
 
 
         exerciseCard.appendChild(exerciseMuscle)
@@ -77,6 +77,8 @@ const exerciseDescription = async () => {
         exerciseDescriptiondDiv.appendChild(exerciseMuscle)
         exerciseDescriptiondDiv.appendChild(exerciseEquipment)
         exerciseDescriptiondDiv.appendChild(exerciseTarget)
+
+        exerciseDescriptiondDiv.setAttribute('id' , 'exercise')
 
     }
 }

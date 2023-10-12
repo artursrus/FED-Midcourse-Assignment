@@ -7,18 +7,13 @@ let capitalizeLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-const collectingInput = () => {
-    console.log(collectedExercise)
-}
-
-
 const getExercises = async () => {
     const urlAPI = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/chest?limit=5`;
     const keyAPI = {
 	    method: 'GET',
 	    headers: {
-		    'X-RapidAPI-Key': 'e39b19adabmsh7720ea05c21533bp124e55jsn9392d128b25d',
-		    'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+            'X-RapidAPI-Key': 'be5c212be8msh814b96c66fae9d1p1031efjsnc5860e51a01f',
+            'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
 	    }
     };
 
@@ -66,9 +61,9 @@ const getExercises = async () => {
             console.log(index)
             
             exerciseLink.addEventListener('click', (event) => {
+                //Prevents load to a new page without getting exercise name
                 event.preventDefault();
                 collectedExercise = exerciseP.textContent.toLowerCase()
-                collectingInput()
                 window.location.href = `exerciseDescription.html?exercise=${collectedExercise}`;
             })
         });
@@ -83,4 +78,3 @@ const getExercises = async () => {
 getExercises();
 
 
-export {collectedExercise};
