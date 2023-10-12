@@ -1,49 +1,37 @@
+/* CSS in exercise.css */
 
 .carousel-container {
-    text-align: center;
-    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden; /* Hide overflow to prevent horizontal scrollbar */
 }
 
 .carousel {
     display: flex;
-    overflow: hidden;
-    white-space: nowrap;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    padding: 20px;
+    transition: transform 1s ease-in-out;
 }
 
 .carousel-item {
-    flex: 0 0 auto;
-    width: 100%;
-    padding: 0 20px;
-    text-align: left;
+    flex: 0 0 100%;
+    text-align: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin-right: 20px;
+    padding: 20px; /* Add padding for consistent alignment */
+    display: flex; /* Center horizontally */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
 
-.carousel-item h3 {
-    font-size: 20px;
-    margin-top: 0;
+.carousel-item ul {
+    padding: 0; /* Remove default padding for the ul */
 }
 
-.carousel ul {
-    list-style-type: disc;
-    padding-left: 20px;
+.carousel-item li {
+    text-align: left; /* Align the text to the left within list items */
+    margin: 5px 0; /* Add vertical margin for spacing between list items */
 }
 
-h2 {
-    font-size: 24px;
-}
-
-/* Styles for smaller screens (mobile) */
-@media screen and (max-width: 768px) {
-    .carousel {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        overflow: visible; /* Allow content to overflow container */
-    }
-
-    .carousel-item {
-        width: 100%;
-        padding: 20px 0;
-    }
-}
+/* Additional styling if needed */
+/* Add your additional CSS rules here */
