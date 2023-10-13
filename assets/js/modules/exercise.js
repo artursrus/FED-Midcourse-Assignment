@@ -11,7 +11,7 @@ const exerciseDescription = async () => {
     const replacedSpaces = collectedExercise.replace(/\s+/g,"%20");
     console.log(replacedSpaces)
 
-    const urlAPI = `https://exercisedb.p.rapidapi.com/exercises/name/${replacedSpaces}?imit=10`;
+    const urlAPI = `https://exercisedb.p.rapidapi.com/exercises/name/${replacedSpaces}?limit=10`;
     const keyAPI = {
 	    method: 'GET',
 	    headers: {

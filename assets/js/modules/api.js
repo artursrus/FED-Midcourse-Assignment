@@ -1,14 +1,16 @@
-// Api KEY = 0hmDrXG1OUselhJqNDT5Jg==31C3PNP5j2D66iM2
+const urlParams = new URLSearchParams(window.location.search);
+const collectedBodyPart = urlParams.get('exercises');
 const displayExercises = document.querySelector('#displayExercises')
 
 let collectedExercise = "";
 
+//Capitalise the first letter while leaving the rest of the string
 let capitalizeLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 const getExercises = async () => {
-    const urlAPI = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/chest?limit=5`;
+    const urlAPI = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${collectedBodyPart}?limit=5`;
     const keyAPI = {
 	    method: 'GET',
 	    headers: {
@@ -16,7 +18,7 @@ const getExercises = async () => {
             'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
 	    }
     };
-
+    console.log(urlAPI)
     const response = await fetch(urlAPI, keyAPI);
     const result = await response.json();
 
@@ -40,7 +42,7 @@ const getExercises = async () => {
             exerciseP.textContent = capitalizedExercise;
             exerciseGif.src = exercise.gifUrl;
 
-            exerciseP.setAttribute('id', index)
+            exerciseP.setAttribute('idcollectedExercise?limit=5', index)
             exerciseLink.href = "exerciseDescription.html"
 
             //Appending so that image is in the div container
