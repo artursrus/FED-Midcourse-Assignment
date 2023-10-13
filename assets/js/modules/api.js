@@ -1,5 +1,3 @@
-const urlParams = new URLSearchParams(window.location.search);
-const collectedBodyPart = urlParams.get('exercises');
 const displayExercises = document.querySelector('#displayExercises')
 
 let collectedExercise = "";
@@ -10,7 +8,7 @@ let capitalizeLetter = (string) => {
 }
 
 const getExercises = async () => {
-    const urlAPI = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${collectedBodyPart}?limit=5`;
+    const urlAPI = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/back?limit=5`;
     const keyAPI = {
 	    method: 'GET',
 	    headers: {
@@ -42,7 +40,7 @@ const getExercises = async () => {
             exerciseP.textContent = capitalizedExercise;
             exerciseGif.src = exercise.gifUrl;
 
-            exerciseP.setAttribute('idcollectedExercise?limit=5', index)
+            exerciseP.setAttribute('id', index)
             exerciseLink.href = "exerciseDescription.html"
 
             //Appending so that image is in the div container

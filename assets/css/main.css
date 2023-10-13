@@ -310,3 +310,34 @@ main div.blur.on {
     display: none;
   }
 }
+
+#exerciseCard {
+  padding: 1rem;
+}
+
+#exercise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 1rem;
+}
+
+#exercise img{
+  width: 80%;
+  max-width: 500px;
+}
+
+#displayExercises a {
+  color: inherit;
+  text-decoration: none;
+
+}
+
+#displayExercises p {
+  font-weight: 500;
+}
