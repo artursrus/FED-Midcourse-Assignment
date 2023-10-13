@@ -1,0 +1,40 @@
+:root {
+  /* COLORS */
+  /**/
+  --colour-midnight-express-blue: #1c1e35;
+  --colour-feta-white: #f1faee;
+  --colour-torch-red: #f80e24;
+  --colour-night-black: #080f0f;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::marker {
+  content: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: var(--colour-night-black);
+  color: var(--colour-feta-white);
+  padding: 2rem;
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+button,
+label,
+h1,
+input {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

@@ -1,40 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Acme Fitness Finder</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script type="module" src="./assets/js/app.js"></script>
+  </head>
+  <body>
     <header>
-        <nav id="navBar">
-            <div id="navBarLogo">
-                <img>LOGO
-            </div>
-            <ul>
-                <li>
-                    <a>Home</a>
-                </li>
-                <li>
-                    <a>Exercises</a>
-                </li>
-            </ul>
-        </nav>
+      <nav class="nav-bar" aria-label="Navigation Bar">
+        <div class="nav-bar-logo">
+          <a href="./index.html" aria-label="Home Page">
+            <img src="./assets/img/logo.png" alt="Rocket.Logo" />
+          </a>
+        </div>
+        <ul
+          class="nav-links"
+          aria-expanded="false"
+          aria-label="Navigation Links"
+        >
+          <li>
+            <a href="./index.html">Home</a>
+          </li>
+
+          <li>
+            <a href="#">Features</a>
+          </li>
+          <li>
+            <a href="#">Reviews</a>
+          </li>
+          <li>
+            <a href="#">Exercises</a>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+        <button class="user-button" aria-label="User Profile">
+          <img src="./assets/img/default-avatars/avatar2.png" alt="user.png" />
+        </button>
+        <button class="nav-bar-button" aria-label="Toggle Navigation Menu">
+          <div class="bar"></div>
+        </button>
+        <div class="user-profile"><h1 class="username"></h1></div>
+      </nav>
     </header>
     <main>
-        <section id="hero-section">
-            <div id="hero-container">
-                <img src="assets/img/mobile-hero.jpg">
-                <div id="overlay-gradient">
-                    <h3>Find Workout Exercises That Fit You</h3>
-                </div>
+      <section class="hero">
+        <h1>
+          <strong>Achieve Conditioning</strong> &
+          <strong>Muscle Enhancement</strong>
+        </h1>
+        <h2>Become Stronger, Healthier And More Active.</h2>
+        <button class="cta-button">Get Active</button>
+        <div class="hero-carousel">
+          <img
+            data-active
+            src="./assets/img/hero-carousel/hero-1.jpg"
+            alt="hero-1.jpg"
+          />
+          <img src="./assets/img/hero-carousel/hero-2.jpg" alt="hero-2.jpg" />
+          <img src="./assets/img/hero-carousel/hero-3.jpg" alt="hero-3.jpg" />
+          <div class="overlay-gradient"></div>
+        </div>
+        <div class="hero-carousel-buttons">
+          <button data-button="1"></button><button data-button="2"></button
+          ><button data-button="3"></button>
+        </div>
+      </section>
+      <section class="about">
+        <div><h1 class="title">About Us?</h1></div>
+        <div>
+          <h2>ACME</h2>
+          <h3>
+            Achieving Conditioning and Muscle Enchancement is within your reach.
+          </h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio
+            placeat nulla repudiandae nam ipsum sunt ea est sint ut, libero vel
+            dignissimos. Perspiciatis sed consequuntur esse ab aperiam iure
+            cupiditate? Lorem ipsum dolor sit, amet consectetur adipisicing
+            elit. Tenetur earum magnam deserunt illo repudiandae blanditiis
+            libero distinctio officia ab perspiciatis! Vel aut, dolores dicta
+            consequatur omnis nulla facere unde eos. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Temporibus enim aliquid consequatur
+            doloremque recusandae ratione quas nulla molestias animi maxime
+            aliquam atque odit dolorem tempore voluptate corrupti, vero id
+            porro?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+            ipsa vero vel sit tenetur laborum dignissimos earum soluta ex, eum
+            pariatur rem cum magni! Consequatur rerum porro voluptatum iure
+            sunt! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Maiores beatae hic rem fuga officia atque assumenda esse ab, numquam
+            iusto dolores! Libero corporis quae nulla laboriosam accusantium
+            recusandae eum neque?
+          </p>
+          <button class="about-button">Find out more</button>
+        </div>
+      </section>
+      <section class="features">
+        <div><h1 class="title">Features</h1></div>
+        <h2>We offer a wide range of features</h2>
+        <div class="feature-wrapper">
+          <div class="feature-card" aria-label="">
+            <div class="feature-stars" aria-hidden="true">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+              <i class="fa-regular fa-star"></i>
             </div>
-            
-        </section>
+            <h2>Free Tier</h2>
+            <ul>
+              <li>Ability to access user profile settings</li>
+              <li>Saving up to 10 favourite exercises to your profile</li>
+              <li>Keeping track of your body</li>
+              <li>Check out nutrition recomendations</li>
+              <li>Access to 1000s of ilustrations of exercises</li>
+              <li>Improve your physique</li>
+            </ul>
+            <h3>Free <strong>Free</strong></h3>
+          </div>
+          <div class="feature-card" aria-label="">
+            <div class="feature-stars" aria-hidden="true">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <h2>Pro Tier</h2>
+            <ul>
+              <li>Ability to access user profile settings</li>
+              <li>Saving up to 10 favourite exercises to your profile</li>
+              <li>Keeping track of your body</li>
+              <li>Check out nutrition recomendations</li>
+              <li>Access to 1000s of ilustrations of exercises</li>
+              <li>Improve your physique</li>
+            </ul>
+            <h3>£225 <strong>£250</strong></h3>
+          </div>
+          <div class="feature-card" aria-label="">
+            <div class="feature-stars" aria-hidden="true">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h2>Elite Tier</h2>
+            <ul>
+              <li>Ability to access user profile settings</li>
+              <li>Saving up to 10 favourite exercises to your profile</li>
+              <li>Keeping track of your body</li>
+              <li>Check out nutrition recomendations</li>
+              <li>Access to 1000s of ilustrations of exercises</li>
+              <li>Improve your physique</li>
+            </ul>
+            <h3>£480 <strong>£600</strong></h3>
+          </div>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="information">
+          <h1 class="title">Testimonials</h1>
+          <h2>Checkout what our clients have to say</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
+            voluptate modi dolores perspiciatis vero cupiditate reiciendis
+            eveniet, doloribus illo quis nam explicabo veniam neque, aut
+            consequatur ut expedita iure ipsum!
+          </p>
+          <button>Read More</button>
+        </div>
+        <div class="review-wrapper">
+          <div class="slide">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet
+              suscipit praesentium, ea tempore perspiciatis reiciendis.
+            </p>
+            <div class="user">
+              <img
+                src="./assets/img/default-avatars/avatar2.png"
+                alt="user-avatar"
+              />
+              <div class="info">
+                <h3>Jenny Dooe</h3>
+                <h4>Athlete</h4>
+              </div>
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+          </div>
+          <div class="slide">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+              eum laboriosam consequuntur id, incidunt blanditiis voluptates
+              tempora vitae inventore, nesciunt, quia atque quam laudantium
+              excepturi corporis dolore similique? Vero, laudantium?
+            </p>
+            <div class="user">
+              <img
+                src="./assets/img/default-avatars/avatar2.png"
+                alt="user-avatar"
+              />
+              <div class="info">
+                <h3>John Doe</h3>
+                <h4>Body Builder</h4>
+              </div>
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+          </div>
+          <div class="slide">
+            <p>
+              Lorem adipisicing elit. Eligendi eum laboriosam consequuntur id,
+              incidunt blanditiis voluptates tempora vitae inventore, nesciunt,
+              quia atque quam laudantium excepturi corporis dolore similique?
+              Vero, laudantium?
+            </p>
+            <div class="user">
+              <img
+                src="./assets/img/default-avatars/avatar2.png"
+                alt="user-avatar"
+              />
+              <div class="info">
+                <h3>Jonny Dhooe</h3>
+                <h4>Kickboxing Trainer</h4>
+              </div>
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+          </div>
+          <div class="slide">
+            <p>
+              Voluptates tempora vitae inventore, nesciunt, quia atque quam
+              laudantium excepturi corporis dolore similique? Vero, laudantium?
+            </p>
+            <div class="user">
+              <img
+                src="./assets/img/default-avatars/avatar2.png"
+                alt="user-avatar"
+              />
+              <div class="info">
+                <h3>Danny Johns</h3>
+                <h4>MMA Fighter</h4>
+              </div>
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-        <p>Copyright</p>
+      <div class="column1">
+        <div>
+          <img src="./assets/img/logo.png" alt="logo.png" />
+          <h1>ACME</h1>
+        </div>
+        <div>
+          <h2>Open Times:</h2>
+          <h3>Monday - Friday</h3>
+          <h4>7:00Am - 10:00Pm</h4>
+          <h3>Saturday - Sunday</h3>
+          <h4>9:00Am - 3:00Pm</h4>
+        </div>
+      </div>
+      <div class="column2">
+        <div>
+          <h2>Contact Us:</h2>
+          <h3><i class="fa-solid fa-house"></i> 36 Amazing Rd AA00 A00</h3>
+          <h3><i class="fa-solid fa-phone"></i> 0000 000 0000</h3>
+          <h3>
+            <a href="#"><i class="fa-solid fa-envelope"></i> info@ACMEFF.com</a>
+          </h3>
+        </div>
+        <div>
+          <h2>Socials:</h2>
+          <a href="#"><i class="fa-brands fa-square-facebook"></i></a
+          ><a href="#"><i class="fa-brands fa-square-x-twitter"></i></a
+          ><a href="#"><i class="fa-brands fa-square-instagram"></i></a
+          ><a href="#"><i class="fa-brands fa-square-github"></i></a>
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
